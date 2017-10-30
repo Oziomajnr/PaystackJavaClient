@@ -9,14 +9,42 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PaystackAuthorization {
+    /**
+     * the authorization code for the card,
+     * to be used for making transactions on behalf of the user
+     */
     private String authorization_code;
+    /**
+     * the type of card
+     */
     private String card_type;
+    /**
+     * the last four digits on the card
+     */
     private Integer last4;
+    /**
+     * the year the card would expire
+     */
     private Integer exp_year;
+    /**
+     * bank identification number
+     */
     private String bin;
+    /**
+     * the bank that issued  the card to the user
+     */
     private String bank;
+    /**
+     * the channel of this authorization "bank" or "card"
+     */
     private String channel;
+    /**
+     * can this authorzation be used to make transaction on behalf of the user
+     */
     private boolean reusable;
+    /**
+     * country code of the authorization e.g "NG"
+     */
     private String country_code;
 
     public PaystackAuthorization() {

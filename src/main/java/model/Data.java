@@ -10,25 +10,72 @@ import java.math.BigDecimal;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public  class PaystackData {
+public  class Data {
+    /**
+     * the amount for a transaction
+     */
     private BigDecimal amount;
+    /**
+     * the currency for the transaction
+     */
     private String currency;
+    /**
+     * the date the transaction occured
+     */
     private String transaction_date;
+    /**
+     * status of transaction
+     * if the transaction is successful, status = "success"
+     */
     private String status;
+    /**
+     * the unique reference that identifies the transaction
+     */
     private String reference;
+    /**
+     * the type of paystack account the transaction was made, could be "test" or "live"
+     */
     private String domain;
    // private String metadata;
+    /**
+     * details about the transaction or why it failed
+     */
     private String gateway_response;
+    /**
+     * message for invalid request
+     */
     private String message;
+    /**
+     * the channel the transaction was made, could be "bank" or "card"
+     */
     private String channel;
+    /**
+     * the ip adress of the user performing the transaction
+     */
     private String ip_address;
+    /**
+     *
+     */
     private String fees;
-    private PaystackPlan plan;
+    /**
+     * the plan code if this transaction was made for a plan
+     */
+    private String plan;
+    /**
+     * extra information about this transaction
+     */
     private PaystackLog log;
+    /**
+     * the date the transaction was paid
+     */
     private String paid_at;
+    /**
+     * details concerning the card,
+     * so that it can be used for making tranaction on behalf of the user the next time
+     */
     private PaystackAuthorization authorization;
 
-    public PaystackData() {
+    public Data() {
     }
 
     public BigDecimal getAmount() {
@@ -127,11 +174,11 @@ public  class PaystackData {
         this.fees = fees;
     }
 
-    public PaystackPlan getPlan() {
+    public String getPlan() {
         return plan;
     }
 
-    public void setPlan(PaystackPlan plan) {
+    public void setPlan(String plan) {
         this.plan = plan;
     }
 

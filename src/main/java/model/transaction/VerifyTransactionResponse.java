@@ -1,7 +1,8 @@
-package model;
+package model.transaction;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import model.Data;
 
 /**
  * Created by SQ-OGBE PC on 21/09/2017.
@@ -9,13 +10,23 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PaystackVerifyTransactionResponse {
+public class VerifyTransactionResponse {
 
+    /**
+     * this status is "true" if the request is successful and false if is not
+     * NOTE: This does not mean the transaction was successful, data.status holds that information
+     */
     private String status;
+    /**
+     * information about the request, could be "verification successful" or "invalid key"
+     */
     private String message;
-    private PaystackData data;
+    /**
+     * contains details about the transaction
+     */
+    private Data data;
 
-    public PaystackVerifyTransactionResponse() {
+    public VerifyTransactionResponse() {
     }
 
     public String getStatus() {
@@ -34,11 +45,11 @@ public class PaystackVerifyTransactionResponse {
         this.message = message;
     }
 
-    public PaystackData getData() {
+    public Data getData() {
         return data;
     }
 
-    public void setData(PaystackData data) {
+    public void setData(Data data) {
         this.data = data;
     }
 

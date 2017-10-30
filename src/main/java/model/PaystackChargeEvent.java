@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PaystackChargeEvent {
     private String event;
-    private PaystackData data;
+    private Data data;
 
     public String getEvent() {
         return event;
@@ -22,11 +22,11 @@ public class PaystackChargeEvent {
         this.event = event;
     }
 
-    public PaystackData getData() {
+    public Data getData() {
         return data;
     }
 
-    public void setData(PaystackData data) {
+    public void setData(Data data) {
         this.data = data;
     }
 }

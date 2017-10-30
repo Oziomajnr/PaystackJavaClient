@@ -1,4 +1,4 @@
-package model;
+package model.transaction;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PaystackInitTransactionResponse {
+public class InitializeTransactionResponse {
     private boolean status;
     private String message;
     private Data data;
@@ -20,7 +20,13 @@ public class PaystackInitTransactionResponse {
          * this is the redirect url that the user would use to make the payment
          */
         private String authorization_url;
+        /**
+         * this code identifies the payment url
+         */
         private String access_code;
+        /**
+         * the unique reference used to identify this transaction
+         */
         private String reference;
 
 
