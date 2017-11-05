@@ -10,7 +10,6 @@ import javax.validation.constraints.Digits;
 import java.util.List;
 
 /**
- * Created by OGBE  on 20/09/2017.
  * This class represents the post object that would initialize a paystack transaction
  * to generate the url that would be used for payment.
  */
@@ -85,6 +84,8 @@ public class InitializeTransactionRequest {
     private Integer transaction_charge;
 
     private List<String> channel;
+
+
 
     public String getEmail() {
         return email;

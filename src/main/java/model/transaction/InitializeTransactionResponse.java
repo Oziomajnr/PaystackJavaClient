@@ -4,11 +4,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
- * Created by SQ-OGBE PC on 20/09/2017.
+ * Response returned from the paystack initialize transaction api
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class InitializeTransactionResponse {
+    private static final Object STATUS_CODE_OK = 200;
     private boolean status;
     private String message;
     private Data data;

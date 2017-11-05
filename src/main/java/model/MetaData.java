@@ -2,7 +2,8 @@ package model;
 
 /**
  * Created by SQ-OGBE PC on 28/10/2017.
- * This class is used to add extra information to a paystack transaction during initialization
+ * This class is used to add extra information to a paystack transaction during
+ * you can add other information here and they would be saved by paystack
  */
 public class MetaData {
     /**
