@@ -8,12 +8,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public  class PaystackHistory {
+public  class History {
     private String type;
     private String message;
     private String time;
 
-    public PaystackHistory() {
+    public History() {
     }
 
     public String getType() {

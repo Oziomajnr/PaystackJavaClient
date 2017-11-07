@@ -3,7 +3,7 @@ package model.transaction;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import model.MetaData;
-import model.PaystackBearer;
+import model.Bearer;
 
 import javax.validation.ValidationException;
 import javax.validation.constraints.Digits;
@@ -19,7 +19,7 @@ import java.util.List;
 public class InitializeTransactionRequest {
 
     /**
-     Amount in kobo
+     * Amount in kobo
      */
     @Digits(integer = 9, fraction = 0)
     private Integer amount;
@@ -36,21 +36,21 @@ public class InitializeTransactionRequest {
     private String plan;
     /**
      * This is a unique identifier that help paystack identify this transaction.
-     *
+     * <p>
      * Never send the same reference twice.
      * Only send Alphanumeric characters and -, . and =. Other characters are invalid (no spaces, newlines etc).
      */
     private String reference;
 
     /**
-     *The code for the subaccount that owns the payment. e.g. ACCT_8f4s1eq7ml6rlzj
+     * The code for the subaccount that owns the payment. e.g. ACCT_8f4s1eq7ml6rlzj
      */
     private String subaccount;
 
     /**
      * Who bears Paystack charges?
      */
-    private PaystackBearer bearer = PaystackBearer.ACCOUNT;
+    private Bearer bearer = Bearer.ACCOUNT;
 
 
     /**
@@ -86,7 +86,6 @@ public class InitializeTransactionRequest {
     private List<String> channel;
 
 
-
     public String getEmail() {
         return email;
     }
@@ -119,11 +118,11 @@ public class InitializeTransactionRequest {
         this.subaccount = subaccount;
     }
 
-    public PaystackBearer getBearer() {
+    public Bearer getBearer() {
         return bearer;
     }
 
-    public void setBearer(PaystackBearer bearer) {
+    public void setBearer(Bearer bearer) {
         this.bearer = bearer;
     }
 

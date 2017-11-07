@@ -64,7 +64,7 @@ public  class Data {
     /**
      * extra information about this transaction
      */
-    private PaystackLog log;
+    private Log log;
     /**
      * the date the transaction was paid
      */
@@ -73,7 +73,7 @@ public  class Data {
      * details concerning the card,
      * so that it can be used for making tranaction on behalf of the user the next time
      */
-    private PaystackAuthorization authorization;
+    private Authorization authorization;
 
     public Data() {
     }
@@ -182,11 +182,11 @@ public  class Data {
         this.plan = plan;
     }
 
-    public PaystackLog getLog() {
+    public Log getLog() {
         return log;
     }
 
-    public void setLog(PaystackLog log) {
+    public void setLog(Log log) {
         this.log = log;
     }
 
@@ -198,11 +198,11 @@ public  class Data {
         this.paid_at = paid_at;
     }
 
-    public PaystackAuthorization getAuthorization() {
+    public Authorization getAuthorization() {
         return authorization;
     }
 
-    public void setAuthorization(PaystackAuthorization authorization) {
+    public void setAuthorization(Authorization authorization) {
         this.authorization = authorization;
     }
 }

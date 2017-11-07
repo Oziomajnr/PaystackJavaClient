@@ -10,9 +10,9 @@ import java.util.List;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PaystackLog {
+public class Log {
 
-    public PaystackLog() {
+    public Log() {
     }
 
     private Integer time_spent;
@@ -23,7 +23,7 @@ public class PaystackLog {
     private boolean mobile;
     private List<Object> input;
     private String channel;
-    private List<PaystackHistory> history;
+    private List<History> history;
 
     public Integer getTime_spent() {
         return time_spent;
@@ -89,11 +89,11 @@ public class PaystackLog {
         this.channel = channel;
     }
 
-    public List<PaystackHistory> getHistory() {
+    public List<History> getHistory() {
         return history;
     }
 
-    public void setHistory(List<PaystackHistory> history) {
+    public void setHistory(List<History> history) {
         this.history = history;
     }
 }

@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @JsonInclude(JsonInclude.Include.NON_ABSENT)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PaystackPlan {
+public class Plan {
     private Integer id;
     private String name;
     private String plan_code;

@@ -8,14 +8,14 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PaystackCustomer {
+public class Customer {
     private Integer id;
     private String customer_code;
     private String first_name;
     private String last_name;
     private String email;
 
-    public PaystackCustomer() {
+    public Customer() {
     }
 
     public Integer getId() {

@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PaystackAuthorization {
+public class Authorization {
     /**
      * the authorization code for the card,
      * to be used for making transactions on behalf of the user
@@ -47,7 +47,7 @@ public class PaystackAuthorization {
      */
     private String country_code;
 
-    public PaystackAuthorization() {
+    public Authorization() {
     }
 
     public String getAuthorization_code() {

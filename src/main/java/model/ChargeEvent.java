@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PaystackChargeEvent {
+public class ChargeEvent {
     private String event;
     private Data data;
 
