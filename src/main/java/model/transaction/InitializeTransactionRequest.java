@@ -7,6 +7,7 @@ import model.Bearer;
 
 import javax.validation.ValidationException;
 import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -29,6 +30,7 @@ public class InitializeTransactionRequest {
      * this if often used as a unique identifier for this customer
      * an email would be sent to this customer after this transaction
      */
+    @NotNull
     private String email;
     /**
      * For recurring fees plan is set for non recurring fees plan is not set
@@ -40,6 +42,7 @@ public class InitializeTransactionRequest {
      * Never send the same reference twice.
      * Only send Alphanumeric characters and -, . and =. Other characters are invalid (no spaces, newlines etc).
      */
+    @NotNull
     private String reference;
 
     /**
